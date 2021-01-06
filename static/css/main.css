@@ -1,0 +1,110 @@
+body {
+    background-color:white;
+}
+
+#container {
+    position: relative;
+    text-align: center;
+    color: white;   
+}
+
+#blur_effect {
+    filter: blur(5px);
+}
+
+#topic {
+    position: absolute;
+    top: 140px;
+    left: 50px;
+    font-size: 25px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+#theory_body {
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+#horizontal_line{
+    width: auto;
+    border-top: 1px solid black;
+}
+
+#image_position {
+    margin-left: 400px;
+}
+
+a:link, a:visited {
+    background-color: red;
+    border-radius: 5px;
+    border: 1px solid red;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#choose_file_button {
+    background-color: blue;
+    border-radius: 5px;
+    border: 1px solid blue;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    position: relative;
+    width: 125px;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+.hide_file {
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    font-size: 24px;
+    width: 100%;
+    cursor: pointer;
+    
+}
+
+#predict_button {
+    background-color: blue;
+    border-radius: 5px;
+    border: 1px solid blue;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    position: relative;
+    width: 125px;
+    height: 100%;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#infected_dialog_box {
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+#uninfected_dialog_box {
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 1px solid green;
+    border-radius: 4px;
+}

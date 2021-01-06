@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-sacel=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie-edge">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+        <title>Malaria Cell Detection-HOME</title>
+        <link rel="icon" href="{{ url_for('static', filename='images/20870761.jpg') }}" type="image/gif">
+    </head>
+    <body>   
+        <div id="container">
+            <img id="blur_effect" src="{{ url_for('static',filename='images/dataset-cover.jpg') }}" alt="missing">
+            <div id="topic">
+            <h1>Malaria Cell Detection</h1>
+            </div>
+        </div>
+              
+        <div id="theory_body">
+        <h2>Introduction</h2>
+
+        <div id="horizontal_line"></div>
+
+        <p>
+            <ul>
+                <li>
+                    Malaria is a life threatening disease caused by parasites that are trasmitted in people through the bites of infected female Anopheles mosquitoes.
+                </li><br>
+                <li>
+                    It remains a major burden on global health, with roughly 200 million cases worldwide and 4 hundred thousand deaths per year.
+                </li><br>
+                <li>
+                    The standard way of diagnoising malaria is by visually examining blood smears for parasite-infected red blood cells under the microscope by qualified technicians.
+                </li><br>
+                <li>
+                    This method is inefficient on the large scale and the diagnosis depends upon the experience and the knowledge of the person doing the examination.
+                </li>
+            </ul> 
+        </p><br>
+        For more information on disease and way of diagnosis, <a target="_blank" href="https://www.google.com/search?source=hp&ei=x0jeX8qdDKCJ4-EP7rKQkAw&q=malaria&oq=malaria&gs_lcp=CgZwc3ktYWIQAzIICAAQsQMQyQMyBQgAELEDMgIIADICCAAyAggAMgUIABCxAzIFCAAQsQMyAggAMgUIABCxAzICCAA6CAgAEOoCEI8BOgsIABCxAxCDARDJAzoICAAQsQMQgwE6AgguOg4ILhCxAxCDARDHARCjAjoRCC4QsQMQgwEQxwEQowIQkwI6CAguELEDEIMBOgUILhCxAzoFCAAQkgM6CwguELEDEMkDEJMCUIcJWNARYI0VaAFwAHgAgAGxAogBkwqSAQcwLjYuMC4xmAEAoAEBqgEHZ3dzLXdperABCrgBAw&sclient=psy-ab&ved=0ahUKEwiKnYbQ2NrtAhWgxDgGHW4ZBMIQ4dUDCAc&uact=5">click here</a>
+        <br>
+        <h2>Standard Way of Diagnosis</h2>
+
+        <div id="horizontal_line"></div>
+        <br>
+        The standard way of the diagnosis is visually examining the blood smears for parasite-infected red blood cells under the microscope.<br>
+        Below shown images are microscopic sample images that is seen by the person who is actually examining the cell.<br>
+        <br>
+
+        <div id="image_position">
+            <img src="{{ url_for('static',filename='images/C1_thinF_IMG_20150604_104942_cell_72.png') }}" alt="missing" width="200" height="200" > 
+            <figcaption>Fig 1: Uninfected Cell Sample</figcaption>
+            <br>
+            <img src="{{ url_for('static',filename='images/C37BP2_thinF_IMG_20150620_132440a_cell_108.png') }}" alt="missing" width="200" height="200">
+            <figcaption>Fig 2: Infected Cell Sample</figcaption>
+        </div>
+
+        <br>
+        <h2>Malaria Cell Detector</h2>
+
+        <div id="horizontal_line"></div>
+        <br>
+        Knowing the disadvantage of the standard way of diagnosis of Malaria, I made a web based application that uses Deep learning (Convolutional Neural Network) to classify the microscopic images to tell whether it is infected or not. <br>
+        This application is based on a deep learning model that has been trained on thousands of similar microscopic images and has the calculated accuracy of 91-94 %.        
+        
+        <br><br>
+
+        <a href="{{ url_for('webapp') }}" target="_blank">Web Application</a>
+        
+        </div>
+    </body>
+</html>

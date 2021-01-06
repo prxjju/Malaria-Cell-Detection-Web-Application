@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-sacel=1.0">
+        <meta http-equiv="x-UA-Compatible" content="ie-edge">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+        <title>Malaria Cell Detection-WEBAPP</title>
+        <link rel="icon" href="{{ url_for('static',filename='images/20870761.jpg') }}" type="image/gif">
+        <script src="{{ url_for('static',filename='javascript/main.js') }}"></script>
+    </head>
+    <body>
+
+        <div id="container">
+            <img id="blur_effect" src="{{ url_for('static',filename='images/dataset-cover.jpg') }}" alt="missing">
+            <div id="topic">
+            <h1>Malaria Cell Detection</h1>
+            </div>
+        </div>
+
+        <div id="theory_body">
+        <h2>Instructions</h2>
+
+        <div id="horizontal_line"></div>
+
+        <ul>
+            <li>Click on the "upload image" to upload the image on which the prediction has to be performed</li>
+            <br>
+            <li>Click on "Predict"</li>
+        </ul>
+        <br>
+
+        <form id="myform" method="POST" enctype="multipart/form-data" action="{{ url_for('predict') }}">
+            <div id="choose_file_button">Choose File
+                <input class="hide_file" type="file" name="myimage" accept="image/*" onchange="loadFile(event);">
+            </div>
+            <br>
+            <img id="output" width="200" height="200" />
+            <br><br>
+            <!--<input type="submit" value="Predict">-->
+            <button id="predict_button" type="submit" >Predict</button>
+        </form>
+
+        {% if data==1 %}
+        <dialog open id="infected_dialog_box">
+            <h3>You Are Infected!</h3>
+        </dialog>
+        {% elif data==0 %}
+        <dialog open id="uninfected_dialog_box">
+            <h3>You Are Uninfected!</h3>
+        </dialog>
+        {% endif %}
+
+        </div>
+    </body>
+</html>
