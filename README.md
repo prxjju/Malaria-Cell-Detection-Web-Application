@@ -1,8 +1,6 @@
 # Malaria-Cell-Detection
 Frontend- HTML, CSS, Javascript
 
-Web Framework- Flask
-
-Backend- Jupyter Notebook, Python3
+Backend- Python3, Flask
 
 Algorithm used- Convolutional Neural Network
